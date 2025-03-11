@@ -1,0 +1,13 @@
+name: "Predictive Heating"
+description: "Service d'IA prédictive pour optimiser le chauffage"
+version: "1.0.0"
+slug: "predictive_heating"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+ports:
+  7777/tcp: 7777
