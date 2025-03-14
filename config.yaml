@@ -1,6 +1,6 @@
 name: "Predictive Heating"
 description: "Service d'IA prédictive pour optimiser le chauffage"
-version: "1.0.0"
+version: "1.0.1"
 slug: "predictive_heating"
 init: false
 arch:
