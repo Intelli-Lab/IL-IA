@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
 import pandas as pd
 import tensorflow as tf
+import csv
 
 app = Flask(__name__)
+
+# Ici on stock les donnés et seuls les dernieres sont envoyées (celle de la journée passé)
 
 # Exemple de données (à remplacer par des données réelles)
 data = {
