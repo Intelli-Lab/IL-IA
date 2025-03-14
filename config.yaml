@@ -1,7 +1,7 @@
 name: "IL-IA"
 description: "Service d'IA prédictive pour optimiser le chauffage"
 version: "0.0.1"
-slug: "predictive_heating"
+slug: "IL_IA"
 init: false
 arch:
   - aarch64
