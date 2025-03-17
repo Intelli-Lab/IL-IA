@@ -60,7 +60,7 @@ def entrainementLocal(data_path, model_path): # entraine avec un fichier préenr
 def decision(params): # prend en entrée les paramètres et le chemin du modèle
     # Charger le modèle si il y en a un
     if Model == None:
-        model = torch.load(os.path.join(Model_directory, Default_model))
+        model = torch.load(os.path.join(Model_directory, Default_model), weights_only=True)
     else:
         model = Model
     # Prétraiter les données
