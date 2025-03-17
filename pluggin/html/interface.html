@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interface API</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Interface API</h1>
+    <form id="apiForm">
+        <label for="temp_ext">Température extérieure:</label><br>
+        <input type="text" id="temp_ext" name="temp_ext"><br>
+        <label for="temp_int">Température intérieure:</label><br>
+        <input type="text" id="temp_int" name="temp_int"><br>
+        <label for="temp_consigne">Température de consigne:</label><br>
+        <input type="text" id="temp_consigne" name="temp_consigne"><br>
+        <label for="mov">Mov:</label><br>
+        <input type="radio" id="mov1" name="mov" value="1">
+        <label for="mov1">1</label><br>
+        <input type="radio" id="mov0" name="mov" value="0">
+        <label for="mov0">0</label><br>
+        <input type="submit" value="Envoyer">
+    </form>
+    <div id="result"></div>
+
+    <script>
+    $("#apiForm").submit(function(event) {
+        event.preventDefault();
+        var temp_ext = $("#temp_ext").val();
+        var temp_int = $("#temp_int").val();
+        var temp_consigne = $("#temp_consigne").val();
+        var mov = $("input[name='mov']:checked").val();
+        $.get("/decision", { temp_ext: temp_ext, temp_int: temp_int, temp_consigne: temp_consigne, mov: mov })
+            .done(function(data) {
+                $("#result").html(data);
+            })
+            .fail(function(jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR);
+                var errorMessage = "Erreur : " + textStatus + ", " + errorThrown;
+                $("#result").html(errorMessage + "<br>" + JSON.stringify(jqXHR));
+            });
+    });
+    </script>
+</body>
+</html>
