@@ -1,6 +1,6 @@
 name: "IL-IA"
 description: "Service d'IA prédictive pour optimiser le chauffage"
-version: "0.0.1"
+version: "0.0.2"
 slug: "IL_IA"
 init: false
 arch:
