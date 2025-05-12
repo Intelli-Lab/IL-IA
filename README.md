@@ -9,3 +9,5 @@ source .env/bin/activate
 pip3 install flask torch pandas
 ```
 > Il faut ensuite installer torch (consignes sur le site de torch)
+
+enfin le script peut etre executé

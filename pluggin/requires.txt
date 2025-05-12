@@ -1,0 +1,8 @@
+flask
+torch
+pandas
+json
+numpy
+joblib
+tensorflow
+sklearn

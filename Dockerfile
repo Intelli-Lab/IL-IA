@@ -12,8 +12,7 @@ RUN \
 WORKDIR /data
 
 # Copy data for add-on
-COPY run.sh /
-COPY setup.py /
-RUN chmod a+x /run.sh
+COPY pluggin/*
+RUN chmod a+x pluggin/run.sh
 
 CMD [ "/run.sh" ]

@@ -1,2 +1,7 @@
 .env
 __pycache__
+pluggin/api.py
+pluggin/iatorch.py
+pluggin/setup.py
+pluggin/ia.py
+pluggin/versun.py
