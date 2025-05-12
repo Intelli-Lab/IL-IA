@@ -6,4 +6,5 @@ python3 -m venv .venv
 source ./.venv/bin/activate
 
 pip install -r require.txt
+
 python3 prediction_ia_chauffage.py
