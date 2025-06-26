@@ -8,7 +8,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
 # Charger les données
-with open("/var/www/html/plugins/script/data/donnees_ia_chauffage_ameliorees.json") as f:
+with open("dossier-entrainement.json") as f:
     data = pd.DataFrame(json.load(f))
 
 X = data.drop(columns=["temperature_consigne"])

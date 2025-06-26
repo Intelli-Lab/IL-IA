@@ -27,7 +27,7 @@ consigne = scaler_y.inverse_transform(y_scaled)[0][0]
 chauffage = "ON" if consigne > donnees["temperature_interieure"] else "OFF"
 
 # Sauvegarder
-with open("/var/www/html/plugins/script/data/output.json", "w") as f:
+with open("output.json", "w") as f:
     json.dump({
         "consigne": round(float(consigne), 2),
         "chauffage": chauffage

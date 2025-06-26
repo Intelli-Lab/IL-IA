@@ -7,4 +7,4 @@ source ./.venv/bin/activate
 
 pip install -r require.txt
 
-python3 prediction_ia_chauffage.py
+python3 entrainement-IA.py
